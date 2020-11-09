@@ -1,0 +1,66 @@
+/* レシピ画像 */
+.recipe-icon{
+  width: 100vw;
+}
+.new_recipe_body{
+  width: 1200px;
+  margin: 120px auto 0;
+}
+.new_recipe{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.new_recipe h2{
+  font-size: 30px;
+  margin: 0 auto;
+  padding-left: 200px;
+}
+
+.new_recipe_btn {
+  width: 200px;
+  padding: 12px 40px;
+  border-radius: 20px; /* 角を丸くする */
+  background-color: #FF9933;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+/* 投稿一覧表示 */
+
+.recipe_box{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.recipe_lists{
+  width: 270px;
+  height: 351px;
+  background-color: aqua;
+  margin-right: 30px;
+  margin-bottom: 40px;
+}
+.recipe-img-content{
+  background-color: rebeccapurple;
+  height: 216px;
+}
+.recipe-info{
+  background-color:wheat;
+  height: 135px;
+}
+.item-name{
+  color: #EF6537;
+  padding-top: 10px;
+  margin-bottom: 15px;
+}
+
+.day_iine{
+  display: flex;
+  justify-content: space-between;
+}
+.title{
+  font-size: 18px;
+  margin-bottom: 54px;
+}
