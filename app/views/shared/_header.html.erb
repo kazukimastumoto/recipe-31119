@@ -1,0 +1,34 @@
+<header class="input_box_body">
+  <div class="logo">
+    <%= "LOGO" %>
+  </div>
+  <form class="search-form" action="#">
+    <input class='input-box' placeholder='キーワードから探す'>
+      <button class="search-button">
+        <h4>検索</h4>
+      </button>
+  </form>
+  <div class="header_if">
+  <% if user_signed_in? %>
+    <div class="tsuchi">
+      <p>通知</p>
+    </div>
+    <div class="rgout">
+      <%= link_to(destroy_user_session_path,method: :delete) do %>
+      <p>ログアウト</p>
+      <% end %>
+    </div>
+    <% else %>
+    <div class="kinto">
+      <%=link_to(new_user_registration_path) do %>
+      <p>会員登録</p>
+      <% end %>
+    </div>
+    <div class="rgin">
+      <%= link_to(new_user_session_path) do %>
+      <p>ログイン</p>
+      <% end %>
+    </div>
+  <% end %>
+  </div>
+</header>

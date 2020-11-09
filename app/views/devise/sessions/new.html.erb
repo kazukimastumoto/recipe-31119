@@ -1,26 +1,30 @@
-<h2>Log in</h2>
+<%= render "shared/header" %>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+<div class="usertitle"><h2>ユーザーログイン</h2></div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<%= form_with model: @user, url: user_session_path, local: true do |f| %>
+  <div class="user_signin">
+    <div class="aknt_log">
+      <div class="aknt_title"><p>その他お持ちのアカウントでログイン</p></div>
+        <div class="aknt_back_face">
+          <div class="face_font"><p>Facebook</p></div>
+        </div>
+        <div class=aknt_back_gu>
+          <div class="go_font"><p>google</p></div>
+        </div>
     </div>
-  <% end %>
+    <div class= email_log>
+      <div class="roguin_title"><p>メールアドレスでログイン</p></div>
+        <div class="user_signin_back">
+          <%= f.email_field :email, class:"user_signin_mini",placeholder:"メールアドレス", autofocus: true, autocomplete: "email" %>
+        </div>
+        <div class="user_signin_pass">
+          <%= f.password_field :password, class:"user_signin_mini",placeholder:"パスワード",autocomplete: "current-password" %>
+        </div>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+        <div class="user_signin_btn">
+          <%= f.submit "ログイン", class: :form_btn%>
+        </div>
+    </div>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
