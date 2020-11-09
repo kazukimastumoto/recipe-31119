@@ -1,0 +1,96 @@
+
+.input_box_body{
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  margin: 25px auto;
+  position: relative;
+}
+.logo{
+  width: 180px;
+  height: 49px;
+  border: 1px solid #EF6537;
+  color: #EF6537;
+  text-align: center;
+  padding-top: 15px;
+}
+.search-form{
+  position: absolute;
+  left: 230px;
+}
+.input-box{
+  border: 1px solid #EF6537;
+  width: 420px;
+  height: 40px;
+  border-radius: 20px; /* 角を丸くする */
+}
+
+.search-button{
+  border: 1px solid #EF6537;
+  width: 85px;
+  height: 40px;
+  text-align: center;
+  border-radius: 20px; /* 角を丸くする */
+  color: #EF6537;
+  margin-left: 10px;
+}
+
+.header_if{
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+.kinto {
+  color: #EF6537;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  border: 1px solid #EF6537;
+  margin-right: 10px;
+}
+.kinto p {
+  margin-top: 26px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.rgin{
+  background-color: #EF6537;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  border: 1px solid #EF6537;
+}
+.rgin p {
+  margin-top: 26px;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+}
+
+.tsuchi {
+  color: #EF6537;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  border: 1px solid #EF6537;
+  margin-right: 10px;
+}
+.tsuchi p {
+  margin-top: 26px;
+  text-align: center;
+  font-size: 14px;
+}
+.rgout{
+  background-color: #EF6537;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  border: 1px solid #EF6537;
+}
+.rgout p {
+  margin-top: 26px;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+}

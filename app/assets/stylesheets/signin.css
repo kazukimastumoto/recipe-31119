@@ -1,0 +1,92 @@
+
+/* ログイン */
+
+/* メールアドレス */
+
+.user_signin{
+  width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+  display: flex;
+}
+.email_log{
+width: 590px;
+height: 309px;
+border: 3px solid #D6D6D6;
+border-radius: 10px; /* 角を丸くする */
+}
+.roguin_title{
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 30.5px;
+}
+.user_signin_back{
+  height: 42px;
+  width: 360px;
+  border: 1px solid #D6D6D6;
+  border-radius: 10px; /* 角を丸くする */
+  margin: auto;
+  margin-bottom: 10px;
+}
+.user_signin_mini {
+  padding-top: 10px;
+  padding-left: 15px;
+}
+
+/* パスワード */
+.user_signin_pass{
+  height: 42px;
+  width: 360px;
+  border: 1px solid #D6D6D6;
+  border-radius: 10px; /* 角を丸くする */
+  margin: auto;
+}
+
+/* ログインボタン */
+
+.user_signin_btn{
+  margin: auto;
+  margin-top: 60.5px;
+  width: 272px;
+  height: 51px;
+  background-color: #EF6537;
+  border-radius: 30px; /* 角を丸くする */
+}
+
+/* アカウントでログイン */
+.aknt_log{
+  width: 590px;
+height: 309px;
+border: 3px solid #D6D6D6;
+border-radius: 10px; /* 角を丸くする */
+}
+.aknt_title{
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 30.5px;
+}
+.aknt_back_face{
+  height: 50px;
+  width: 360px;
+  border: 1px solid #D6D6D6;
+  margin: auto;
+  margin-bottom: 10px;
+  background-color: #385C8E;
+}
+.face_font{
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 16px;
+}
+
+.aknt_back_gu{
+  height: 50px;
+  width: 360px;
+  border: 1px solid #D6D6D6;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.go_font{
+  text-align: center;
+  padding-top: 16px;
+}

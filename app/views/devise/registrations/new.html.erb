@@ -1,0 +1,80 @@
+<%= render "shared/header" %>
+
+<div class="usertitle"><h2>新規会員登録</h2></div>
+
+<div class="userform">
+  <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="form">
+    <div class="name">
+      <div class="nickname">
+        <div class="nickname_mini">
+          <%= f.label :nickname, "ニックネーム" %><br />
+        </div>
+        <div class="hissu">
+          <p>必須</p>
+        </div>
+      </div>
+      <div class="nickname_back">
+        <div class="nickname_form">
+          <%= f.text_field :nickname, class: :user_name %>
+        </div>
+      </div>
+    </div>
+
+    <div class="email">
+      <div class="emailaddress">
+        <div class="emailaddress_mini">
+          <%= f.label :email, "メールアドレス"%><br />
+        </div>
+        <div class="hissu">
+          <p>必須</p>
+        </div>
+      </div>
+      <div class="email_back">
+        <div class="email_form">
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: :user_email %>
+        </div>
+      </div>
+    </div>
+
+    <div class="password_body">
+      <div class="password">
+        <div class="password_mini">
+          <%= f.label :password, "パスワード(6文字以上)" %>
+        </div>
+        <div class="hissu">
+          <p>必須</p>
+        </div>
+      </div>
+      <div class="password_back">
+        <div class="password_form">
+          <%= f.password_field :password, autocomplete: "new-password", class: :user_password %>
+        </div>
+      </div>
+    </div>
+
+    <div class="confirmation_body">
+      <div class="confirmation">
+        <div class="confirmation_mini">
+          <%= f.label :password_confirmation,"パスワードの確認" %><br />
+        </div>
+        <div class="hissu">
+          <p>必須</p>
+        </div>
+      </div>
+      <div class="confirmation_back">
+        <div class="confirmation_form">
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: :user_confirmation%>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="form_btn_body">
+    <%= f.submit "新規登録", class: :form_btn %>
+  </div>
+<% end %>
+</div>

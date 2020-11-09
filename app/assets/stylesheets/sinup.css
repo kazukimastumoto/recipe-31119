@@ -1,0 +1,170 @@
+/* 見出し */
+.usertitle {
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 60.5px;
+  font-size: 30px;
+}
+
+.form{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* ニックネーム */
+.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #D6D6D6;
+  border-bottom: 1px solid #D6D6D6;
+}
+.nickname_back{
+  width: 900px;
+  padding: 12px 0;
+}
+.nickname {
+  background-color: #F5F5F5;
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  width: 400px;
+  justify-content: space-between;
+  height: 113px;
+}
+.nickname_mini {
+  font-size: 18px;
+  margin-left: 24px;
+}
+.nickname_form {
+  padding: 0 51.5px 0 32px;
+}
+.hissu {
+  background-color: #FFDE3B;
+  margin-right: 18px;
+}
+.hissu p{
+  margin: 6px 15px;
+  font-size: 12px;
+}
+.user_name {
+  height: 40px;
+  width: 393px;
+  border: 1px solid #D6D6D6
+}
+
+/* メールアドレス */
+
+.email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #D6D6D6;
+}
+.emailaddress{
+  background-color: #F5F5F5;
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  width: 400px;
+  justify-content: space-between;
+  height: 83px;
+}
+.email_back{
+  width: 900px;
+  padding: 10px 0;
+}
+.emailaddress_mini {
+  font-size: 18px;
+  margin-left: 24px;
+}
+.email_form {
+  padding: 0 51.5px 0 32px;
+}
+.user_email{
+  height: 40px;
+  width: 393px;
+  border: 1px solid #D6D6D6
+}
+
+/* パスワード */
+
+.password_body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #D6D6D6;
+}
+
+.password{
+  background-color: #F5F5F5;
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  width: 400px;
+  justify-content: space-between;
+  height: 106px;
+}
+.password_mini{
+  font-size: 18px;
+  margin-left: 24px;
+}
+.password_back{
+  width: 900px;
+  padding: 10px 0;
+}
+.password_form{
+  padding: 0 51.5px 0 32px;
+}
+.user_password {
+  height: 40px;
+  width: 393px;
+  border: 1px solid #D6D6D6
+}
+
+/* パスワード確認 */
+.confirmation_body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #D6D6D6;
+}
+.confirmation {
+  background-color: #F5F5F5;
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  width: 400px;
+  justify-content: space-between;
+  height: 106px;
+}
+.confirmation_mini{
+  font-size: 18px;
+  margin-left: 24px;
+}
+.confirmation_back {
+  width: 900px;
+  padding: 10px 0;
+}
+.confirmation_form{
+  padding: 0 51.5px 0 32px;
+}
+.user_confirmation{
+  height: 40px;
+  width: 393px;
+  border: 1px solid #D6D6D6
+}
+
+/* 新規登録ボタン */
+.form_btn_body {
+  margin: auto;
+  margin-top: 60.5px;
+  width: 272px;
+  height: 51px;
+  background-color: #EF6537;
+  border-radius: 30px; /* 角を丸くする */
+}
+.form_btn {
+  color: #FFFFFF;
+  padding: 17px 104px;
+}

@@ -1,0 +1,30 @@
+<%= render "shared/header" %>
+
+<div class="usertitle"><h2>ユーザーログイン</h2></div>
+
+<%= form_with model: @user, url: user_session_path, local: true do |f| %>
+  <div class="user_signin">
+    <div class="aknt_log">
+      <div class="aknt_title"><p>その他お持ちのアカウントでログイン</p></div>
+        <div class="aknt_back_face">
+          <div class="face_font"><p>Facebook</p></div>
+        </div>
+        <div class=aknt_back_gu>
+          <div class="go_font"><p>google</p></div>
+        </div>
+    </div>
+    <div class= email_log>
+      <div class="roguin_title"><p>メールアドレスでログイン</p></div>
+        <div class="user_signin_back">
+          <%= f.email_field :email, class:"user_signin_mini",placeholder:"メールアドレス", autofocus: true, autocomplete: "email" %>
+        </div>
+        <div class="user_signin_pass">
+          <%= f.password_field :password, class:"user_signin_mini",placeholder:"パスワード",autocomplete: "current-password" %>
+        </div>
+
+        <div class="user_signin_btn">
+          <%= f.submit "ログイン", class: :form_btn%>
+        </div>
+    </div>
+  </div>
+<% end %>
