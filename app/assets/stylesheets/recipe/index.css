@@ -38,29 +38,50 @@
 .recipe_lists{
   width: 270px;
   height: 351px;
-  background-color: aqua;
   margin-right: 30px;
   margin-bottom: 40px;
 }
+.recipe_lists:nth-of-type(4n){
+  margin-right: 0;
+}
+.recipe-img {
+  width: 270px;
+  height: 216px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0; /* 角を丸くする */
+}
 .recipe-img-content{
-  background-color: rebeccapurple;
   height: 216px;
 }
 .recipe-info{
-  background-color:wheat;
-  height: 135px;
+  background-color: #FFF6EE;
+  border-radius: 0 0 20px 20px; /* 角を丸くする */
 }
 .item-name{
   color: #EF6537;
   padding-top: 10px;
   margin-bottom: 15px;
+  margin-left: 6px;
 }
 
 .day_iine{
   display: flex;
   justify-content: space-between;
+  padding-bottom: 10px;
 }
+
+.day {
+  margin-left: 6px;
+  font-size: 14px;
+}
+
+.iine{
+  margin-right: 6px;
+  font-size: 14px;
+}
+
 .title{
   font-size: 18px;
   margin-bottom: 54px;
+  margin-left: 6px;
 }

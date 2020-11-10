@@ -1,0 +1,72 @@
+<%= render "shared/header" %>
+
+<div class="content_form">
+  <h2>レシピ投稿</h2>
+  <%= form_with(model: @recipe, local: true) do |f| %>
+  <div class="content">
+    <div id="content_title">
+      <div class="content_titles">
+        <div class="content_title">
+          <h3>・タイトル</h3>
+        </div>
+        <div class="hissu">
+          <p>必須</p>
+        </div>
+      </div>
+        <div class="title_form">
+          <%= f.text_area :title, placeholder: "タイトル20字以内",maxlength:"20",class: :hol_ti %>
+        </div>
+        <div class="ti_co">
+          <p>一覧画面の掲載されます。</p>
+        </div>
+    </div>
+    <div class="content_image">
+      <div class="co-ims">
+        <div class="co_im_te">
+          <h3>・写真</h3>
+        </div>
+        <div class="hissu">
+          <p>必須</p>
+        </div>
+      </div>
+      <div class="im_fo">
+        <div class=im_ti>
+          <p>画像を登録</p>
+        <%= f.file_field :image,class: :co_im %>
+      </div>
+    </div>
+    <div class="ti_co">
+          <p>一覧画面の掲載されます。</p>
+        </div>
+    <div class="content_recipe">
+      <div class="co_res">
+        <div class="co_re">
+          <h3>・レシピの作り方</h3>
+        </div>
+        <div class="hissu">
+          <p>必須</p>
+        </div>
+      </div>
+      <div class=co_ti>
+      <%= f.text_area :body, placeholder: "レシピ内容", rows: "7", class: :re_ti_co %>
+      </div>
+    </div>
+    <div class="content_price">
+      <div class="co_pr">
+        <div class="co_prs">
+          <h3>・レシピにかかった金額</h3>
+        </div>
+        <div class="hissu">
+          <p>必須</p>
+        </div>
+      </div>
+      <div class="pr_fo">
+        <%= f.text_field :price, placeholder:"例）300" %><span>円</span>
+      </div>
+    </div>
+    <div class="new_btn">
+      <%= f.submit "投稿" , class: :tk_btn %>
+    </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,118 @@
+/* 新規投稿ページ */
+
+/* タイトル */
+.content_form h2 {
+  font-size: 30px;
+  margin-top: 66px;
+  text-align: center;
+}
+.content{
+  width: 1200px;
+  margin: 0 auto;
+}
+.content_titles{
+  display: flex;
+  margin-top: 67px;
+  margin-bottom: 15px;
+}
+.content_title h3{
+  font-size: 18px;
+  margin-right: 13px;
+}
+.title_form {
+  border: 1px solid #D6D6D6;
+}
+.hol_ti{
+  padding-top: 11px;
+  padding-left: 6px;
+  width: 1200px;
+  height: 40px;
+}
+.ti_co p {
+  font-size: 12px;
+}
+
+/* 画像 */
+
+.co-ims{
+  display: flex;
+  margin-top: 62px;
+  margin-bottom: 15px;
+}
+.co_im_te h3 {
+  font-size: 18px;
+  margin-right: 13px;
+}
+.im_fo{
+  border: 1px solid #D6D6D6;
+}
+.im_ti{
+  height: 136px;
+  background-color: #F8F8F8;
+}
+.im_ti p{
+  font-size: 18px;
+  text-align: center;
+  padding-top: 32px;
+}
+.co_im{
+  padding-left: 501px;
+  padding-top: 18px;
+}
+
+/* レシピの作り方 */
+
+.co_res{
+  display: flex;
+  margin-top: 62px;
+  margin-bottom: 15px;
+}
+.co_ti{
+  border: 1px solid #D6D6D6;
+}
+.re_ti_co{
+  width: 1200px;
+  padding-top: 11px;
+  padding-left: 6px;
+}
+.co_re h3{
+  margin-right: 13px;
+  font-size: 18px;
+}
+
+/* レシピにかかった金額 */
+
+.co_pr{
+  margin-top: 32px;
+  margin-bottom: 15px;
+  display: flex;
+}
+.co_prs{
+  margin-right: 13px;
+}
+.pr_fo{
+  width: 180px;
+  height: 40px;
+  border: 1px solid #D6D6D6;
+}
+.pr_fo{
+  display: flex;
+}
+.pr_fo span {
+  padding-top: 11px;
+}
+
+/* 投稿ボタン */
+.new_btn{
+margin: 0 auto;
+margin-top: 80px;
+width: 272px;
+height: 51px;
+border: 1px solid #EF6537;
+border-radius: 20px;
+}
+.tk_btn{
+  padding-left: 115px;
+  padding-top: 19px;
+  color: #EF6537;
+}
