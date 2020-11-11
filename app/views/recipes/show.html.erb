@@ -1,0 +1,57 @@
+<%= render "shared/header" %>
+
+<div class="show_body">
+  <div class="shw_d">
+    <div class="sho_ti">
+      <div class="sho_tit">
+        <%= @recipe.title  %>
+      </div>
+      <div class="sho_day">
+        <%= l @recipe.created_at%>
+      </div>
+    </div>
+    <div class="sho_im">
+      <%= image_tag @recipe.image ,class: :img %>
+    </div>
+    <div class="sho_bo">
+      <div class="sho_aikon">
+        <div class="create">
+          <P>レシピの作り方</P>
+        </div>
+      </div>
+      <div class="sho_bos">
+        <%= @recipe.body %>
+      </div>
+    </div>
+    <div class="sho_pr">
+      <div class="sho_aikon">
+        <div class="create">
+          <P>レシピにかかった金額</p>
+        </div>
+      </div>
+      <div class="sho_prs">
+        <%= @recipe.price%><span>円</span>
+      </div>
+    </div>
+    <div class="shw_user_name">
+      <%= @recipe.user.nickname %>
+    </div>
+    <div class="sho_syes">
+      <div class="sho_sye">
+        <h5>この記事をシェアする</h5>
+      </div>
+      <div class="sye_iine">
+        <p>いいね</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hens_des">
+  <div class="hens_body">
+    <div class="hens">
+      <%= link_to 'レシピを編集', "/", method: :get %>
+    </div>
+    <div class="des">
+      <%= link_to 'レシピを削除', "/", method: :delete %>
+    </div>
+  </div>

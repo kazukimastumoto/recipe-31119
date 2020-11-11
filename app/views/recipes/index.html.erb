@@ -11,25 +11,27 @@
   <div class="recipe_box">
     <% @recipes.each do |recipe| %>
       <div class="recipe_lists">
-        <div class='recipe-img-content'>
-          <%= image_tag recipe.image, class: "recipe-img" %>
-        </div>
-        <div class='recipe-info'>
-          <h3 class='item-name'>
-            <%= recipe.user.nickname %>
-          </h3>
-          <div class="title">
-            <%= recipe.title %>
+        <%= link_to(recipe_path(recipe.id), method: :get) do %>
+          <div class='recipe-img-content'>
+            <%= image_tag recipe.image, class: "recipe-img" %>
           </div>
-          <div class='day_iine'>
-            <div class='day'>
-              <%= l recipe.created_at %>
+          <div class='recipe-info'>
+            <h3 class='item-name'>
+              <%= recipe.user.nickname %>
+            </h3>
+            <div class="title">
+              <%= recipe.title %>
             </div>
-            <div class='iine'>
-              <%= "いいね" %>
+            <div class='day_iine'>
+              <div class='day'>
+                <%= l recipe.created_at %>
+              </div>
+              <div class='iine'>
+                <%= "いいね" %>
+              </div>
             </div>
           </div>
-        </div>
+        <% end %>
       </div>
     <% end %>
   </div>

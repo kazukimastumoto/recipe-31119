@@ -1,0 +1,113 @@
+/* レシピ詳細 */
+
+/* タイトルと投稿日時 */
+.show_body{
+  width: 1200px;
+  height: 1127px;
+  margin: 0 auto;
+  border: 1px solid #EF6537;
+}
+.shw_d{
+  width:820px;
+  margin: 0 auto;
+}
+.sho_ti{
+margin-top: 65px;
+display: flex;
+}
+.sho_tit{
+  font-size: 24px;
+  width: 570px;
+}
+.sho_day{
+  font-size: 14px;
+  padding-top: 11px;
+  padding-left: 93px;
+}
+
+/* 画像 */
+
+.sho_im{
+margin-top: 40px;
+padding-bottom: 35px;
+border-bottom: 1px solid #707070;
+}
+.img{
+  width: 49vw;
+  height: 57vh;
+  object-fit: cover;
+}
+
+/* つくりかた */
+.sho_aikon{
+  margin-top: 36px;
+  display: flex;
+  background-image: url(yazirusi.png);
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+.create{
+  margin-left: 30px;
+}
+.create p {
+  font-size: 18px;
+}
+.sho_bos{
+  padding-left: 5px;
+  font-size: 16px;
+  margin-top: 18px;
+  height: 100px;
+  overflow: scroll;
+  white-space: pre-line;
+}
+
+/* かかった料金 */
+.sho_prs{
+  padding-left: 5px;
+  font-size: 16px;
+  margin-top: 18px;
+}
+
+/* ユーザー名 */
+.shw_user_name{
+  color: #EF6537;
+  font-size: 16px;
+  margin-top: 44px;
+  margin-left: 704px;
+}
+
+/* 記事をシェア */
+.sho_syes{
+  display: flex;
+  margin-top: 121px;
+  margin-bottom: 91px;
+  justify-content: space-between;
+}
+.sho_syes h5 {
+  font-size: 20px;
+}
+
+/* 編集・削除ボタンの実装 */
+.hens_body{
+  display: flex;
+  margin-top: 60px;
+  justify-content: center;
+}
+.hens{
+  width: 320px;
+  height: 51px;
+  padding-top: 17px;
+  color: #EF6537;
+  border: 1px solid #EF6537;
+  text-align: center;
+  border-radius: 30px;
+}
+.des{
+  width: 320px;
+  height: 51px;
+  padding-top: 17px;
+  text-align: center;
+  background-color: #EF6537;
+  color: #FFFFFF;
+  border-radius: 30px;
+}
