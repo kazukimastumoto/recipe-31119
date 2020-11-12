@@ -41,17 +41,37 @@
         <h5>この記事をシェアする</h5>
       </div>
       <div class="sye_iine">
-        <p>いいね</p>
+        <% if user_signed_in? %>
+          <% if current_user.liked_by?(@recipe.id) %>
+            <%= link_to destroy_like_path(@recipe), method: :delete do %>
+              <i class="fas fa-heart"></i>
+            <% end %>
+          <% else %>
+            <%= link_to create_like_path(@recipe), method: :post  do %>
+              <i class="far fa-heart"></i>
+            <% end %>
+          <% end %>
+          <%= @recipe.likes.count %>
+        <% else %>
+          <i class="fas fa-heart"></i>
+            <%= @recipe.likes.count %>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
 <div class="hens_des">
-  <div class="hens_body">
-    <div class="hens">
-      <%= link_to 'レシピを編集', "/", method: :get %>
-    </div>
-    <div class="des">
-      <%= link_to 'レシピを削除', "/", method: :delete %>
-    </div>
-  </div>
+  <% if user_signed_in? %>
+    <% if current_user.id == @recipe.user_id %>
+      <div class="hens_body">
+        <div class="hens">
+          <%= link_to 'レシピを編集', edit_recipe_path(@recipe.id), method: :get %>
+        </div>
+        <div class="des">
+          <%= link_to '削除', recipe_path(@recipe.id), method: :delete %>
+      </div>
+    <% else %>
+    <% end %>
+  <% else %>
+  <% end %>
+</div>

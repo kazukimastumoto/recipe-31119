@@ -29,6 +29,7 @@
   height: 40px;
 }
 .ti_co p {
+  margin-top: 7px;
   font-size: 12px;
 }
 
@@ -97,6 +98,10 @@
 }
 .pr_fo{
   display: flex;
+}
+.i{
+  width: 178px;
+  text-align: right;
 }
 .pr_fo span {
   padding-top: 11px;

@@ -32,8 +32,8 @@ likesテーブル(中間テーブル)
 
 |  Column                   | Type       | Options     |
 | ------------------------- | ---------- | ----------- |
-| user                      | references | null: false |
-| recipe                    | references | null: false |
+| user                      | integer    | null: false |
+| recipe                    | integer    | null: false |
 
 Association
 - belongs_to :user
