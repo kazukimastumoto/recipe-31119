@@ -5,5 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   validates :nickname, presence: true, length: { maximum: 7 }
 
-  has_many :recipes
+  has_many :recipes, dependent: :destroy
+  has_many :likes, dependent: :destroy
+
+  def liked_by?(recipe_id)
+    likes.where(recipe_id: recipe_id).exists?
+  end
 end

@@ -53,6 +53,8 @@
 .recipe-img-content{
   height: 216px;
 }
+/* ユーザー名 */
+
 .recipe-info{
   background-color: #FFF6EE;
   border-radius: 0 0 20px 20px; /* 角を丸くする */
@@ -64,24 +66,31 @@
   margin-left: 6px;
 }
 
+/* タイトル */
+.title{
+  font-size: 18px;
+  padding-bottom: 54px;
+  margin-left: 6px;
+}
+
+/* 日時といいね */
 .day_iine{
   display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
 }
 
+/* 日時 */
 .day {
   margin-left: 6px;
   font-size: 14px;
 }
 
+/* いいね */
 .iine{
   margin-right: 6px;
   font-size: 14px;
 }
-
-.title{
-  font-size: 18px;
-  margin-bottom: 54px;
-  margin-left: 6px;
+.fas{
+  color: #F4617B;
 }

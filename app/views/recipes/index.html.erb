@@ -11,7 +11,7 @@
   <div class="recipe_box">
     <% @recipes.each do |recipe| %>
       <div class="recipe_lists">
-        <%= link_to(recipe_path(recipe.id), method: :get) do %>
+        <%= link_to recipe_path(recipe.id), method: :get do %>
           <div class='recipe-img-content'>
             <%= image_tag recipe.image, class: "recipe-img" %>
           </div>
@@ -26,12 +26,26 @@
               <div class='day'>
                 <%= l recipe.created_at %>
               </div>
+          <% end %>
               <div class='iine'>
-                <%= "いいね" %>
+                <% if user_signed_in? %>
+                  <% if current_user.liked_by?(recipe.id) %>
+                    <%= link_to destroy_like_path(recipe), method: :delete do %>
+                      <i class="fas fa-heart"></i>
+                    <% end %>
+                  <% else %>
+                    <%= link_to create_like_path(recipe), method: :post  do %>
+                      <i class="far fa-heart"></i>
+                    <% end %>
+                  <% end %>
+                  <%= recipe.likes.count %>
+                <% else %>
+                  <i class="fas fa-heart"></i>
+                    <%= recipe.likes.count %>
+                <% end %>
               </div>
             </div>
           </div>
-        <% end %>
       </div>
     <% end %>
   </div>

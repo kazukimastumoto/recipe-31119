@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 
 <div class="content_form">
-  <h2>レシピ投稿</h2>
+  <h2>レシピ編集</h2>
   <%= form_with(model: @recipe, local: true) do |f| %>
   <div class="content">
     <div id="content_title">
@@ -29,12 +29,9 @@
           <p>必須</p>
         </div>
       </div>
-      <div class="im_fo">
-        <div class=im_ti>
-          <p>画像を登録</p>
-        <%= f.file_field :image,class: :co_im %>
+      <div class="sho_im sho_im2">
+        <%= image_tag @recipe.image ,class: :img %>
       </div>
-    </div>
     <div class="ti_co">
           <p>一覧画面に掲載されます。</p>
         </div>
@@ -61,11 +58,11 @@
         </div>
       </div>
       <div class="pr_fo">
-        <%= f.text_field :price, placeholder:"例）300", class: :i %><span>円</span>
+        <%= f.text_field :price, placeholder:"例）300",class: :i %><span>円</span>
       </div>
     </div>
     <div class="new_btn">
-      <%= f.submit "投稿" , class: :tk_btn %>
+      <%= f.submit "保存" , class: :tk_btn %>
     </div>
     <% end %>
   </div>
