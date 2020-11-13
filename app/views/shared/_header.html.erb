@@ -1,40 +1,40 @@
 <header class="input_box_body">
-<div class="he">
-  <%= link_to("/") do %>
-    <div class="logo">
-      <%= "LOGO" %>
-    </div>
-  <% end %>
-  <form class="search-form" action="#">
-    <input class='input-box' placeholder='&nbsp;キーワードから探す'>
-    <button>
-      <h4>検索</h4>
-    </button>
-  </form>
-  <div class="header_if">
-    <% if user_signed_in? %>
-      <%= link_to("/") do %>
-        <div class="tsuchi">
-          <p>通知</p>
-        </div>
-      <% end %>
-      <%= link_to(destroy_user_session_path,method: :delete) do %>
-        <div class="rgout">
-          <p>ログアウト</p>
-        </div>
-      <% end %>
-      <% else %>
-      <%=link_to(new_user_registration_path) do %>
-        <div class="kinto">
-          <p>会員登録</p>
-        </div>
-      <% end %>
-      <%= link_to(new_user_session_path) do %>
-        <div class="rgin">
-          <p>ログイン</p>
-        </div>
-      <% end %>
+  <div class="he">
+    <%= link_to("/") do %>
+      <div class="logo">
+        <%= "LOGO" %>
+      </div>
     <% end %>
+    <%= form_with(url: search_recipes_path, local: true, method: :get, class: "search-form") do |f| %>
+      <div class="input-box">
+      <%= f.text_field :keyword, placeholder:'キーワードから探す', class:"seach_text" %>
+      </div>
+      <%= f.submit "検索", class: "search-btn" %>
+    <% end %>
+    <div class="header_if">
+      <% if user_signed_in? %>
+        <%= link_to("/") do %>
+          <div class="tsuchi">
+            <p>通知</p>
+          </div>
+        <% end %>
+        <%= link_to(destroy_user_session_path,method: :delete) do %>
+          <div class="rgout">
+            <p>ログアウト</p>
+          </div>
+        <% end %>
+        <% else %>
+        <%=link_to(new_user_registration_path) do %>
+          <div class="kinto">
+            <p>会員登録</p>
+          </div>
+        <% end %>
+        <%= link_to(new_user_session_path) do %>
+          <div class="rgin">
+            <p>ログイン</p>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
   </div>
-</div>
 </header>

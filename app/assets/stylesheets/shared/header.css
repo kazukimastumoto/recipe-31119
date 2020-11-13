@@ -1,11 +1,8 @@
-
+/* ヘッター */
 .input_box_body{
   border-bottom: 1px solid #EF6537;
 }
-.logname{
-
-}
-
+/* ロゴ */
 .he{
   display: flex;
   align-items: center;
@@ -21,9 +18,12 @@
   text-align: center;
   padding-top: 15px;
 }
+
+/* 検索フォーム */
 .search-form{
   position: absolute;
   left: 230px;
+  display: flex;
 }
 .input-box{
   border: 1px solid #EF6537;
@@ -31,8 +31,13 @@
   height: 40px;
   border-radius: 20px;
 }
-
-button{
+.seach_text{
+  padding: 1px 0 0 10px;
+  width: 420px;
+  height: 40px;
+  border-radius: 20px;
+}
+.search-btn{
   border: 1px solid #EF6537;
   width: 85px;
   height: 40px;
@@ -42,11 +47,14 @@ button{
   margin-left: 10px;
 }
 
+/* 通知 */
 .header_if{
   display: flex;
   position: absolute;
   right: 0;
 }
+
+/* 会員登録 */
 .kinto {
   color: #EF6537;
   width: 74px;
@@ -61,6 +69,7 @@ button{
   font-size: 14px;
 }
 
+/* ログイン */
 .rgin{
   background-color: #EF6537;
   width: 74px;
@@ -75,6 +84,7 @@ button{
   font-size: 14px;
 }
 
+/* 通知 */
 .tsuchi {
   color: #EF6537;
   width: 74px;
@@ -88,6 +98,8 @@ button{
   text-align: center;
   font-size: 14px;
 }
+
+/* ログアウト */
 .rgout{
   background-color: #EF6537;
   width: 74px;
