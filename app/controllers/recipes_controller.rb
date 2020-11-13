@@ -38,6 +38,10 @@ class RecipesController < ApplicationController
     redirect_to root_path
   end
 
+  def search
+    @recipes = Recipe.search(params[:keyword])
+  end
+
   private
   def recipe_params
     params.require(:recipe).permit(:image, :price, :title, :body).merge(user_id: current_user.id)

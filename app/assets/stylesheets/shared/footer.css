@@ -1,0 +1,64 @@
+.footer_body{
+  margin-top: 232px;
+  padding-bottom: 56px;
+  background-color: #F7F7F7;
+}
+
+.o_menu{
+  width: 1200px;
+  margin: 0 auto;
+}
+.menu{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 40px;
+}
+
+/* レシピをさがす */
+.re_se h5{
+  padding-bottom: 15px;
+  font-size: 16px;
+  font-weight: 700;
+}
+ul.re_me li{
+  padding-bottom: 12px;
+  font-weight: 100;
+}
+
+/* レシピを書く */
+.re_ki h5 {
+  padding-bottom: 15px;
+  font-size: 16px;
+  font-weight: 700
+}
+ul.re_ka_me li{
+  padding-bottom: 12px;
+  font-weight: 100;
+}
+
+/* おすすめ */
+.osu_ti h5 {
+  padding-bottom: 15px;
+  font-size: 16px;
+  font-weight: 700
+}
+ul.osu_me li {
+  padding-bottom: 12px;
+  font-weight: 100;
+}
+
+/* あなたのページ */
+.my_ti h5 {
+  padding-bottom: 15px;
+  font-size: 16px;
+  font-weight: 700
+}
+ul.my_me li {
+  padding-bottom: 12px;
+  font-weight: 100;
+}
+/* ロゴ */
+
+.logo2{
+  margin: 40px 0 0 500px;
+}

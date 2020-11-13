@@ -1,9 +1,8 @@
 <%= render "shared/header" %>
 
-<%= image_tag("first_views.png", class:"recipe-icon") %>
 <div class="new_recipe_body">
   <div class="new_recipe">
-    <h2>・・・・新着レシピ・・・・</h2>
+    <h2>・・・・検索結果・・・・</h2>
     <% if user_signed_in? %>
     <%= link_to "レシピを投稿する",new_recipe_path, class: :new_recipe_btn %>
     <%end%>

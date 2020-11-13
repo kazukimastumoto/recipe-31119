@@ -5,4 +5,12 @@ class Recipe < ApplicationRecord
 
   validates :price, :body, :image, presence: true
   validates :title, presence: true, length: { maximum: 20 }
+
+  def self.search(search)
+    if search != ""
+      Recipe.where('title Like(?)', "%#{search}%")
+    else
+      Recipe.all
+    end
+  end
 end
