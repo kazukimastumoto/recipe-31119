@@ -13,10 +13,19 @@
     <% end %>
     <div class="header_if">
       <% if user_signed_in? %>
-        <%= link_to("/") do %>
+        <%= link_to(notifications_path,method: :get) do %>
+          <% if unchecked_notifications.any? %>
           <div class="tsuchi">
-            <p>通知</p>
+            <span class="fa-layers fa-fw">
+              <span class="fas fa-bell"></span>
+              <span class="fas fa-circle"></span>
+            </span>
           </div>
+          <% else %>
+          <div class="tsuchi">
+              <i class="fas fa-bell"></i>
+          </div>
+          <% end %>
         <% end %>
         <%= link_to(destroy_user_session_path,method: :delete) do %>
           <div class="rgout">

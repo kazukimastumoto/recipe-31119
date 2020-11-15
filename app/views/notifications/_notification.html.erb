@@ -1,0 +1,20 @@
+
+<% visitor = notification.visitor %>
+<% visited = notification.visited %>
+
+<div class="iine_body">
+  <div class="iine_bo">
+    <div class="iine_bo2">
+      <div class="iine_name">
+        <%= visitor.nickname%><span>さんが</span>
+      </div>
+      <div class="iine_re">
+        <%= link_to notification.recipe.title, notification.recipe %>
+      </div>
+      <span>にいいねをしました。</span>
+      <div class="iine_ti">
+        <%= time_ago_in_words(notification.created_at).upcase  %><span>前</span>
+      </div>
+    </div>
+  </div>
+</div>

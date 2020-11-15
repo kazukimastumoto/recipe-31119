@@ -64,12 +64,16 @@
   <% if user_signed_in? %>
     <% if current_user.id == @recipe.user_id %>
       <div class="hens_body">
-        <div class="hens">
-          <%= link_to 'レシピを編集', edit_recipe_path(@recipe.id), method: :get %>
+        <%= link_to(edit_recipe_path(@recipe.id), method: :get) do %>
+          <div class="hens">
+            <p>レシピを編集</p>
+          </div>
+        <% end %>
+        <%= link_to(recipe_path(@recipe.id), method: :delete) do %>
+          <div class="des">
+            <p>削除</p>
         </div>
-        <div class="des">
-          <%= link_to '削除', recipe_path(@recipe.id), method: :delete %>
-      </div>
+      <% end %>
     <% else %>
     <% end %>
   <% else %>

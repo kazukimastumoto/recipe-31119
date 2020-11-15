@@ -14,9 +14,11 @@
 .new_recipe h2{
   font-size: 30px;
   margin: 0 auto;
-  padding-left: 200px;
 }
-
+.new_body {
+  text-align: right;
+  margin-top: -25px;
+}
 .new_recipe_btn {
   width: 200px;
   padding: 12px 40px;

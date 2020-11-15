@@ -1,0 +1,9 @@
+<%= render "shared/header" %>
+<div class="content_form">
+  <h2>通　知</h2>
+</div>
+<% notifications = @notifications.where.not(visitor_id: current_user.id) %>
+  <% if notifications.exists? %>
+    <%= render notifications %>
+  <% end %>
+  <%= render "shared/footer" %>
