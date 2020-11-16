@@ -54,6 +54,18 @@
   right: 0;
 }
 
+.fa-bell:before {
+  font-size: 35px;
+  padding-left: 23px;
+  position: absolute;
+  color: #EF6537;
+}
+.fa-circle:before {
+  padding-left: 40px;
+  position: absolute;
+  color:#FFCA00;
+}
+
 /* 会員登録 */
 .kinto {
   color: #EF6537;
