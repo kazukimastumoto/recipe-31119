@@ -73,20 +73,24 @@
 
 
 # 実装した機能についての説明
-## ユーザーはレシピを投稿するすることができます。
+1. ## ユーザーはレシピを投稿するすることができます。
 [![Image from Gyazo](https://i.gyazo.com/b1c712009bfdcae1a43404927d5293a2.gif)](https://gyazo.com/b1c712009bfdcae1a43404927d5293a2)
 
 
-## ユーザーはいいね（お気に入り）をすることができます。また、解除することができます。
+
+2. ## ユーザーはいいね（お気に入り）をすることができます。また、解除することができます。
 [![Image from Gyazo](https://i.gyazo.com/3de08ff518f5b5c802cca4a3fd2a5dbb.gif)](https://gyazo.com/3de08ff518f5b5c802cca4a3fd2a5dbb)
 
 
-## いいねされたユーザーは、通知されます。
+
+3. ## いいねされたユーザーは、通知されます。
 [![Image from Gyazo](https://i.gyazo.com/b837f4d9de33e7188664bfc0d19783af.gif)](https://gyazo.com/b837f4d9de33e7188664bfc0d19783af)
 
 
-## レシピを検索することができます。
+
+4. ## レシピを検索することができます。
 [![Image from Gyazo](https://i.gyazo.com/c96561156efae81924f514e47045155b.gif)](https://gyazo.com/c96561156efae81924f514e47045155b)
+
 
 
 
