@@ -1,34 +1,26 @@
 <%= render "shared/header" %>
-
-<%= image_tag("first_views.png", class:"recipe-icon") %>
-<div class="new_recipe_body">
-  <div class="new_recipe">
-    <h2>・・・・新着レシピ・・・・</h2>
-  </div>
-  <% if user_signed_in? %>
-  <div class="new_body">
-    <%= link_to "レシピを投稿する",new_recipe_path,class: :new_recipe_btn %>
-  </div>
-  <%end%>
-  <div class="recipe_box">
-    <% @recipes.each do |recipe| %>
+<div class=yu_ti>
+    <%= @user.nickname %>さんのマイレシピ一覧
+</div>
+<div class="recipe_box">
+    <% @user.recipes.each do |recipe| %>
       <div class="recipe_lists">
         <%= link_to recipe_path(recipe.id), method: :get do %>
           <div class='recipe-img-content'>
             <%= image_tag recipe.image, class: "recipe-img" %>
           </div>
-        <% end %>
           <div class='recipe-info'>
             <h3 class='item-name'>
-            <%= link_to recipe.user.nickname, "/users/#{recipe.user_id}"  %>
+              <%= recipe.user.nickname %>
             </h3>
             <div class="title">
-            <%= link_to recipe.title,recipe_path(recipe.id), method: :get  %>
+              <%= recipe.title %>
             </div>
             <div class='day_iine'>
               <div class='day'>
                 <%= l recipe.created_at %>
               </div>
+          <% end %>
               <div class='iine'>
                 <% if user_signed_in? %>
                   <% if current_user.liked_by?(recipe.id) %>

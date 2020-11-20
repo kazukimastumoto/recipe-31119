@@ -2,7 +2,7 @@
   <div class="he">
     <%= link_to("/") do %>
       <div class="logo">
-        <%= "LOGO" %>
+        <%= image_tag "logo.png", class:"logo_ti" %>
       </div>
     <% end %>
     <%= form_with(url: search_recipes_path, local: true, method: :get, class: "search-form") do |f| %>
@@ -13,6 +13,11 @@
     <% end %>
     <div class="header_if">
       <% if user_signed_in? %>
+      <%= link_to "/users/#{current_user.id}/mypege/" do %>
+      <div class="rgou">
+            <p>マイページ</p>
+          </div>
+      <% end %>
         <%= link_to(notifications_path,method: :get) do %>
           <% if unchecked_notifications.any? %>
           <div class="tsuchi">

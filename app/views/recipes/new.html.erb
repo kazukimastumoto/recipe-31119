@@ -13,12 +13,12 @@
           <p>必須</p>
         </div>
       </div>
-        <div class="title_form">
-          <%= f.text_area :title, placeholder: "タイトル20字以内",maxlength:"20",class: :hol_ti %>
-        </div>
-        <div class="ti_co">
-          <p>一覧画面に掲載されます。</p>
-        </div>
+      <div class="title_form">
+        <%= f.text_area :title, placeholder: "タイトル20字以内",maxlength:"20",class: :hol_ti %>
+      </div>
+      <div class="ti_co">
+        <p>一覧画面に掲載されます。</p>
+      </div>
     </div>
     <div class="content_image">
       <div class="co-ims">
@@ -32,12 +32,26 @@
       <div class="im_fo">
         <div class=im_ti>
           <p>画像を登録</p>
-        <%= f.file_field :image,class: :co_im %>
+          <%= f.file_field :image,class: :co_im %>
+        </div>
+      </div>
+      <div class="ti_co">
+        <p>一覧画面に掲載されます。</p>
       </div>
     </div>
-    <div class="ti_co">
-          <p>一覧画面に掲載されます。</p>
+    <div class="content_recipe">
+      <div class="co_res">
+        <div class="co_re">
+          <h3>・材料</h3>
         </div>
+        <div class="hissu">
+          <p>必須</p>
+        </div>
+      </div>
+      <div class=co_ti>
+        <%= f.text_area :material, rows: "7", class: :re_ti_co %>
+      </div>
+    </div>
     <div class="content_recipe">
       <div class="co_res">
         <div class="co_re">
@@ -48,7 +62,7 @@
         </div>
       </div>
       <div class=co_ti>
-      <%= f.text_area :body, rows: "7", class: :re_ti_co %>
+        <%= f.text_area :body, rows: "7", class: :re_ti_co %>
       </div>
     </div>
     <div class="content_price">
@@ -67,7 +81,7 @@
     <div class="new_btn">
       <%= f.submit "投稿" , class: :tk_btn %>
     </div>
-    <% end %>
+  <% end %>
   </div>
 </div>
 

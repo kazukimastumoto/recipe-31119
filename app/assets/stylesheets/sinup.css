@@ -4,6 +4,7 @@
   padding-top: 60px;
   padding-bottom: 60.5px;
   font-size: 30px;
+  font-family: 'Kosugi Maru', sans-serif;
 }
 
 .form{
@@ -168,4 +169,17 @@
 .form_btn {
   color: #FFFFFF;
   padding: 17px 104px;
+}
+
+/* 会員情報変更ページ */
+.password_mini i{
+  font-size: 14px;
+}
+.confirmation_mini i{
+  font-size: 12px;
+}
+
+.form_bt{
+  color: #FFFFFF;
+  padding: 18px 119px;
 }

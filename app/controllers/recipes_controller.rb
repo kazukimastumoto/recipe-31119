@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit]
-  before_action :set_recipe, only: [:show, :edit, :update, :destroy]
+  before_action :set_recipe, only: [:show, :edit, :update, :destroy,]
   before_action :move_to_index, only: [:edit, :update, :destory]
   def index
     @recipes = Recipe.order('created_at DESC')
@@ -44,7 +44,7 @@ class RecipesController < ApplicationController
 
   private
   def recipe_params
-    params.require(:recipe).permit(:image, :price, :title, :body).merge(user_id: current_user.id)
+    params.require(:recipe).permit(:image, :price, :title, :body, :material).merge(user_id: current_user.id)
   end
 
   def set_recipe

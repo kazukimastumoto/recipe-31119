@@ -5,12 +5,20 @@
 <%= form_with model: @user, url: user_session_path, local: true do |f| %>
   <div class="user_signin">
     <div class="aknt_log">
-      <div class="aknt_title"><p>その他お持ちのアカウントでログイン</p></div>
+      <div class="aknt_title"><p>その他お持ちのアカウントでログイン・新規登録</p></div>
         <div class="aknt_back_face">
-          <div class="face_font"><p>Facebook</p></div>
+          <%= link_to(user_facebook_omniauth_authorize_path, method: :post) do %>
+            <div class="face_font">
+              <p>Facebook</p>
+            </div>
+          <% end %>
         </div>
         <div class=aknt_back_gu>
-          <div class="go_font"><p>google</p></div>
+        <%= link_to(user_google_oauth2_omniauth_authorize_path, method: :post) do %>
+          <div class="go_font">
+            <p>google</p>
+          </div>
+        <% end %>
         </div>
     </div>
     <div class= email_log>

@@ -1,0 +1,60 @@
+<%= render "shared/header" %>
+<div class="yumy">
+  <div class="yuti">
+    <div class="yuname"><%= @user.nickname %>さんのメニュー</div>
+    <ul class="yupul">
+      <li>
+        <i class="fas fa-user"></i>
+        <%= link_to "会員情報変更",edit_user_registration_path %>
+      </li>
+      <li>
+        <i class="fab fa-gratipay"></i>
+        <%= link_to "お気に入りレシピ", likes_users_path %>
+      </li>
+    </ul>
+  </div>
+
+    <div class="recipe_box rebo">
+      <% @user.recipes.each do |recipe| %>
+        <div class="recipe_lists">
+          <%= link_to recipe_path(recipe.id), method: :get do %>
+            <div class='recipe-img-content'>
+              <%= image_tag recipe.image, class: "recipe-img" %>
+            </div>
+            <div class='recipe-info'>
+              <h3 class='item-name'>
+                <%= recipe.user.nickname %>
+              </h3>
+              <div class="title">
+                <%= recipe.title %>
+              </div>
+              <div class='day_iine'>
+                <div class='day'>
+                  <%= l recipe.created_at %>
+                </div>
+            <% end %>
+                <div class='iine'>
+                  <% if user_signed_in? %>
+                    <% if current_user.liked_by?(recipe.id) %>
+                      <%= link_to destroy_like_path(recipe), method: :delete do %>
+                        <%= image_tag "heart.png", class:"iine_im" %>
+                      <% end %>
+                    <% else %>
+                      <%= link_to create_like_path(recipe), method: :post  do %>
+                        <%= image_tag "hearthi.png", class:"iine_im" %>
+                      <% end %>
+                    <% end %>
+                    <%= recipe.likes.count %>
+                  <% else %>
+                    <%= image_tag "heart.png", class:"iine_im" %>
+                      <%= recipe.likes.count %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= render "shared/footer" %>
