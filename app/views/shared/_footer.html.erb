@@ -9,7 +9,9 @@
           <li>-カテゴリー</li>
           <li>-話題のレシピ</li>
           <li>-人気の検索キーワード</li>
-          <li>-新着レシピ</li>
+          <%= link_to("/") do %>
+            <li>-新着レシピ</li>
+          <% end %>
         </ul>
       </div>
       <div class="re_ka">
@@ -31,7 +33,11 @@
       </div>
       <div class="my">
         <div class="my_ti">
-          <h5>あなたのページ</h5>
+        <% if user_signed_in? %>
+          <%= link_to "/users/#{current_user.id}/mypege/" do %>
+            <h5>あなたのページ</h5>
+          <% end %>
+        <% end %>
         </div>
         <ul class="my_me">
           <li><%= link_to "-ユーザー登録",new_user_registration_path %></li>
@@ -41,7 +47,7 @@
     </div>
     <%= link_to("/") do %>
       <div class="logo logo2">
-        <%= "LOGO" %>
+        <%= image_tag "logo.png", class:"logo_ti" %>
       </div>
     <% end %>
   </div>

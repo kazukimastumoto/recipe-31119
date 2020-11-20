@@ -4,7 +4,7 @@ class Recipe < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :notifications, dependent: :destroy
 
-  validates :price, :body, :image, presence: true
+  validates :price, :body, :image,:material, presence: true
   validates :title, presence: true, length: { maximum: 20 }
 
   def self.search(search)

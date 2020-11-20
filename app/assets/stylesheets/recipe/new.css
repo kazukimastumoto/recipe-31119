@@ -102,6 +102,7 @@
 .i{
   width: 178px;
   text-align: right;
+  padding-right: 5px;
 }
 .pr_fo span {
   padding-top: 11px;
@@ -109,15 +110,12 @@
 
 /* 投稿ボタン */
 .new_btn{
-margin: 0 auto;
-margin-top: 80px;
-width: 272px;
-height: 51px;
-border: 1px solid #EF6537;
-border-radius: 20px;
+  margin: 80px auto 0;
+  width: 271px;
+  border: 1px solid #EF6537;
+  border-radius: 30px;
 }
 .tk_btn{
-  padding-left: 115px;
-  padding-top: 19px;
+  padding: 18px 120px;
   color: #EF6537;
 }

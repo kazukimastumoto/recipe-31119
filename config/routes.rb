@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {
+    omniauth_callbacks: 'users/omniauth_callbacks',
+    registrations: 'users/registrations'
+  }
   root to: 'recipes#index'
   resources :recipes do
     collection do
@@ -9,4 +12,13 @@ Rails.application.routes.draw do
   resources :notifications, only: :index
   post 'like/:id' => 'likes#create', as: 'create_like'
   delete 'like/:id' => 'likes#destroy', as: 'destroy_like'
+
+  resources :users, only: :show do
+    collection do
+      get :likes
+    end
+    member do
+      get 'mypege'
+    end
+  end
 end
