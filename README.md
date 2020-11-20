@@ -1,6 +1,7 @@
 
 # アプリケーション名：Savings Recipe
 
+<br>
 
 # 概要
 - ユーザーは新規登録することができます。
@@ -13,19 +14,23 @@
 - いいねされたユーザーは、通知されます。
 - ユーザーは他者のレシピをいいね（お気に入り）していれば、何時でも確認する事ができます
 
+<br>
 
 # URL(本番環境)
 
+<br>
 
 # テスト用アカウント
 - E-mail：test@test.com
 - Password:111111k
 
+<br>
 
 # 利用方法
 - レシピを投稿する場合や、いいね（お気に入り）したい場合は、ユーザー登録をする必要があります。
 - レシピを閲覧するだけであれば、ユーザー登録をする必要はありません。
 
+<br>
 
 # 目指した課題解決
 
@@ -104,8 +109,10 @@
 - コメント機能
 - メッセージ機能
 
+<br>
 
 # テーブル設計
+<br>
 
 ## users テーブル
 
@@ -123,6 +130,7 @@
 - has_many :passive_notifications, class_name: 'Notification', foreign_key: 'visited_id', dependent: :destroy
 - has_many :sns_credentials
 
+<br>
 
 ## recipesテーブル
 
@@ -138,6 +146,7 @@
 - has_many :likes, dependent: :destroy
 - has_many :notifications, dependent: :destroy
 
+<br>
 
 ## likesテーブル
 
@@ -150,6 +159,7 @@
 - belongs_to :user
 - belongs_to :recipe
 
+<br>
 
 ## notificationsテーブル
 
@@ -166,6 +176,7 @@
 - belongs_to :visitor, class_name: 'User', foreign_key: 'visitor_id', optional: true
 - belongs_to :visited, class_name: 'User', foreign_key: 'visited_id', optional: true
 
+<br>
 
 ## sns_credentials
 
@@ -176,6 +187,8 @@
 
 ### Association
 - belongs_to :user
+
+<br>
 
 # ER図
 [![Image from Gyazo](https://i.gyazo.com/d42ed9b95042ca192971fb093cc94f19.png)](https://gyazo.com/d42ed9b95042ca192971fb093cc94f19)
