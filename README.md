@@ -192,3 +192,12 @@
 
 # 10. ER図
 [![Image from Gyazo](https://i.gyazo.com/d42ed9b95042ca192971fb093cc94f19.png)](https://gyazo.com/d42ed9b95042ca192971fb093cc94f19)
+
+<br>
+
+# 11. 環境
+- Rails 6.0.3.4
+- ruby 2.6.5p114
+- kaminari 1.2.1
+- devise (4.7.3)
+- mini_magick (4.10.1)
