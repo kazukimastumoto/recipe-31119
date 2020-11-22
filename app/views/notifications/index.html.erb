@@ -6,7 +6,9 @@
   <% if notifications.exists? %>
     <%= render notifications %>
     <div class="p-top">
-      <%= paginate notifications %>
+      <ul id=“pagination”>
+        <li class=“pagination”><%= paginate notifications %></li>
+      </ul>
     </div>
   <% end %>
   <%= render "shared/footer" %>

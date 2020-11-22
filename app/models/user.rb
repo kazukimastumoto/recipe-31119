@@ -9,6 +9,7 @@ class User < ApplicationRecord
 
   has_many :recipes, dependent: :destroy
   has_many :likes, dependent: :destroy
+  has_many :like_recipes, through: :likes, source: :recipe
   has_many :sns_credentials
 
   has_many :active_notifications, class_name: 'Notification', foreign_key: 'visitor_id', dependent: :destroy

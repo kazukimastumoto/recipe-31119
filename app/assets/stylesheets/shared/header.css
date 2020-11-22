@@ -1,6 +1,11 @@
 /* ヘッター */
 .input_box_body{
-  border-bottom: 1px solid #EF6537;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #EF6537;
+    background-color: #FFFFFF;
+    padding-top: 1px;
 }
 /* ロゴ */
 .he{
