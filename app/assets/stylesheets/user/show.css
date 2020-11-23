@@ -1,3 +1,8 @@
+.user_syow{
+  width: 1200px;
+  margin: 45px auto;
+}
+/* ○○さんの情報 */
 .yu_ti{
   text-align: center;
   padding-top: 66px;
@@ -5,8 +10,51 @@
   font-family: 'Kosugi Maru', sans-serif;
 }
 
-.user_syow{
-  width: 1200px;
-  margin: 45px auto;
+/* ユーザーアイコン */
+.user_img{
+  width: 10vw;
+  height: 16vh;
+  border-radius: 50%;
+}
 
+/* フォロー数など */
+.pro{
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(253, 135, 0);;
+}
+
+.frow{
+  background: rgba(255, 218, 175, 0.459);
+  border-radius: 10px;
+  width: 80px;
+  padding-bottom: 15px;
+  padding-top: 12px;
+
+}
+.frow h6{
+  font-size: 14px;
+}
+.fro{
+  background: rgba(255, 218, 175, 0.459);
+  border-radius: 10px;
+  width: 80px;
+  padding-top: 12px;
+
+}
+.fro h6{
+  font-size: 14px;
+}
+.reciin{
+  background: rgba(255, 218, 175, 0.459);
+  border-radius: 10px;
+  width: 80px;
+  padding-top: 12px;
+}
+.reciin h6{
+  font-size: 14px;
+}
+.frow_in{
+  padding-top: 10px;
 }

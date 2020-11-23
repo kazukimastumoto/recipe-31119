@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:mypage]
-  before_action :set_user, only: [:show, :edit, :update, :mypege]
+  before_action :set_user, only: [:show, :edit, :update, :mypege,]
   before_action :move_to_index, only: :mypege
 
   def show
