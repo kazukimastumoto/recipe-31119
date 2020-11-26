@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'relationships/create'
+  get 'relationships/destroy'
   devise_for :users, controllers: {
     omniauth_callbacks: 'users/omniauth_callbacks',
     registrations: 'users/registrations'
@@ -14,11 +16,14 @@ Rails.application.routes.draw do
   delete 'like/:id' => 'likes#destroy', as: 'destroy_like'
 
   resources :users, only: :show do
+    resource :relationships, only: [:create, :destroy]
     collection do
       get :likes
     end
     member do
       get 'mypege'
     end
+    get :follows, on: :member
+    get :followers, on: :member
   end
 end

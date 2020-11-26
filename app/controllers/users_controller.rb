@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, only: [:mypage]
-  before_action :set_user, only: [:show, :edit, :update, :mypege,]
-  before_action :move_to_index, only: :mypege
+  before_action :authenticate_user!, only: [:mypage, :follows, :followers]
+  before_action :set_user, only: [:show, :edit, :update, :mypege, :follows, :followers]
+  before_action :move_to_index, only: [:mypege]
 
   def show
   end
@@ -16,6 +16,14 @@ class UsersController < ApplicationController
   end
 
   def likes
+  end
+
+  def follows
+    @users = @user.followings
+  end
+
+  def followers
+    @users = @user.followers
   end
 
   private

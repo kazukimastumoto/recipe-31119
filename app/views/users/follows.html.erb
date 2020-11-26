@@ -1,7 +1,5 @@
 <%= render "shared/header" %>
-<div class=yu_ti>
-    <%= @user.nickname %>さんのマイレシピ一覧
-</div>
+
 <div class="yumy">
   <div class="yuti">
     <div class="yuimti">
@@ -19,14 +17,12 @@
             <%= @user.followers.count %>
           </div>
         </div>
-        <%= link_to follows_user_path(@user.id) do %>
-          <div class="fro">
-            <h6>フォロー</h6>
-            <div class=frow_in>
-              <%= @user.followings.count %>
-            </div>
+        <div class="fro">
+          <h6>フォロー</h6>
+          <div class=frow_in>
+            <%= @user.followings.count %>
           </div>
-        <% end %>
+        </div>
         <div class="reciin">
           <h6>レシピ数</h6>
           <div class=frow_in>
@@ -59,6 +55,42 @@
       </li>
     </ul>
   </div>
-  <%= render partial: 'user', locals: { user: @user } %>
+  <div class="fol_body">
+    <div class="fol_ti">
+      <P><%= @user.nickname %>さんがフォローしている人（<%= @user.followings.count %>人）</p>
+    </div>
+    <div class="fol_yu">
+      <div class="fol_yu_ti">
+      <% @users.each do |user| %>
+      <%= link_to user_path(user.id) do %>
+      <div class="fol_imgs">
+        <div class="fol_img">
+          <% if user.avatar.attached? %>
+            <%= image_tag user.avatar, class: "recipe-img user_img aicon" %>
+          <% else %>
+            <%= image_tag("default.png", class: "recipe-img user_img aicon") %>
+          <% end %>
+        </div>
+          <div class="folnames">
+            <div class="fol_name">
+            <p><%= user.nickname %></p>
+          </div>
+          <div class="fol">
+              <% if current_user != user %>
+                <% if user.followed_by?(current_user) %>
+                  <p><%=link_to "フォロー解除", user_relationships_path(user.id), method: :delete %></p>
+                <% else %>
+                  <p><%=link_to "フォローする", user_relationships_path(user.id), method: :post %></p>
+              <% end %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+          <% end %>
+      <% end %>
+      </div>
+    </div>
+  </div>
 </div>
+
 <%= render "shared/footer" %>
