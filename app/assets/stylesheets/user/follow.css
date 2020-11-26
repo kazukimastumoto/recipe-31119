@@ -1,0 +1,55 @@
+.fol_body{
+  width: 900px;
+  padding: 40px 120px;
+}
+.fol_ti{
+  text-align: center;
+}
+.fol_ti p{
+  font-size: 26px;
+  margin-bottom: 40px;
+}
+.fol_yu_ti{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.fol_imgs{
+  margin: 5px 10px;
+  background-color: #FFF6EE;
+  flex-wrap: wrap;
+  padding: 20px ;
+  width: 200px;
+  border-radius: 20px;
+}
+.fol_img{
+  text-align: center;
+}
+.fol_name{
+  font-family: 'Kosugi Maru', sans-serif;
+  padding: 15px 0;
+  font-size: 17px;
+}
+.fol{
+  border: 1px solid #FAAA5A;
+  border-radius: 30px;
+  color: #FAAA5A;
+  height: 32px;
+}
+.fol p{
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 6px;
+}
+.fol :hover{
+  border-radius: 30px;
+  background-color: #FAAA5A;
+  color: #FFFFFF;
+  height: 32px;
+}
+.aicon{
+  width: 120px !important;
+  height: 120px !important;
+}

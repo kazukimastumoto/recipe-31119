@@ -12,8 +12,8 @@
 
 /* ユーザーアイコン */
 .user_img{
-  width: 10vw;
-  height: 16vh;
+  width: 165px;
+  height: 165px;
   border-radius: 50%;
 }
 
@@ -29,7 +29,6 @@
   background: rgba(255, 218, 175, 0.459);
   border-radius: 10px;
   width: 80px;
-  padding-bottom: 15px;
   padding-top: 12px;
 
 }
@@ -57,4 +56,5 @@
 }
 .frow_in{
   padding-top: 10px;
+  padding-bottom: 15px;
 }

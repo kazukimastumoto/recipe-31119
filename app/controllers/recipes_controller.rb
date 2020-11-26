@@ -3,7 +3,7 @@ class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :edit, :update, :destroy,]
   before_action :move_to_index, only: [:edit, :update, :destory]
   def index
-    @recipes = Recipe.order('created_at DESC').page(params[:page]).per(8)
+    @recipes = Recipe.order('created_at DESC')
   end
 
   def new

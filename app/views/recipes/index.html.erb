@@ -18,7 +18,7 @@
         <% end %>
           <div class='recipe-info'>
             <h3 class='item-name'>
-            <%= link_to recipe.user.nickname, "/users/#{recipe.user_id}"  %>
+                <%= link_to recipe.user.nickname, "/users/#{recipe.user_id}"  %>
             </h3>
             <div class="title">
             <%= link_to recipe.title,recipe_path(recipe.id), method: :get  %>
@@ -43,8 +43,4 @@
     <% end %>
   </div>
 </div>
-<div class="p-top">
-  <%= paginate @recipes %>
-</div>
-
 <%= render "shared/footer" %>

@@ -11,19 +11,20 @@
         <% if current_user.avatar.attached? %>
           <%= image_tag current_user.avatar, class: "recipe-img user_img" %>
         <% else %>
+        <%= image_tag("default.png", class: "recipe-img user_img") %>
         <% end %>
       </div>
       <div class="pro">
         <div class="frow">
           <h6>フォロワー</h6>
           <div class=frow_in>
-            20
+            <%= current_user.followers.count %>
           </div>
         </div>
         <div class="fro">
           <h6>フォロー</h6>
           <div class=frow_in>
-            20
+            <%= current_user.followings.count %>
           </div>
         </div>
         <div class="reciin">
