@@ -23,7 +23,6 @@ class Recipe < ApplicationRecord
         visited_id: user_id,
         action: 'like'
       )
-
       if notification.visitor_id == notification.visited_id
         notification.checked = true
       end

@@ -13,12 +13,14 @@
         <% end %>
       </div>
       <div class="pro">
-        <div class="frow">
-          <h6>フォロワー</h6>
-          <div class=frow_in>
-            <%= @user.followers.count %>
+        <%=link_to followers_user_path(@user.id) do %>
+          <div class="frow">
+            <h6>フォロワー</h6>
+            <div class=frow_in>
+              <%= @user.followers.count %>
+            </div>
           </div>
-        </div>
+        <% end %>
         <%= link_to follows_user_path(@user.id) do %>
           <div class="fro">
             <h6>フォロー</h6>
@@ -40,18 +42,6 @@
       <li>
         <i class="fas fa-user"></i>
         <%= link_to "プロフィール"%>
-      </li>
-      <li>
-        <i class="fab fa-gratipay"></i>
-        <% if user_signed_in? %>
-          <% if current_user != @user %>
-            <% if @user.followed_by?(current_user) %>
-              <%=link_to "フォロー済み", user_relationships_path(@user.id), method: :delete %>
-            <% else %>
-              <%=link_to "フォローする", user_relationships_path(@user.id), method: :post %>
-            <% end %>
-          <% end %>
-        <% end %>
       </li>
       <li>
         <i class="fas fa-arrow-circle-left"></i>

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:mypage, :follows, :followers]
-  before_action :set_user, only: [:show, :edit, :update, :mypege, :follows, :followers]
+  before_action :set_user, only: [:show, :edit, :update, :mypege, :follows, :followers,]
   before_action :move_to_index, only: [:mypege]
 
   def show
