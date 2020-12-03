@@ -43,7 +43,7 @@
 /* つくりかた */
 .sho_aikon{
   margin-top: 30px;
-  background-image: url(yazirusi.png);
+  background-image: url(/images/yazirusi.png);
   background-repeat: no-repeat;
   background-size: 20px;
 }

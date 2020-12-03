@@ -18,13 +18,19 @@ class UsersController < ApplicationController
   def likes
   end
 
-  def follows
-    @users = @user.followings
-  end
+  def following
+    #@userがフォローしているユーザー
+    @user  = User.find(params[:id])
+    @users = @user.following
+    render 'show_follow'
+end
 
-  def followers
+def followers
+    #@userをフォローしているユーザー
+    @user  = User.find(params[:id])
     @users = @user.followers
-  end
+    render 'show_follower'
+end
 
   private
 

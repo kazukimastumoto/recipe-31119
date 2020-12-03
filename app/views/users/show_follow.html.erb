@@ -19,11 +19,11 @@
             </div>
           </div>
         <% end %>
-        <%= link_to follows_user_path(@user.id) do %>
+        <%= link_to  following_user_path(@user.id) do %>
           <div class="fro">
             <h6>フォロー</h6>
             <div class=frow_in>
-              <%= @user.followings.count %>
+              <%= @user.following.count %>
             </div>
           </div>
         <% end %>
@@ -43,13 +43,13 @@
       </li>
       <li>
         <i class="fas fa-arrow-circle-left"></i>
-        <%= link_to "戻る", root_path %>
+        <%= link_to "戻る", :back %>
       </li>
     </ul>
   </div>
   <div class="fol_body">
     <div class="fol_ti">
-      <P><%= @user.nickname %>さんがフォローしている人（<%= @user.followings.count %>人）</p>
+      <P><%= @user.nickname %>さんがフォローしている人（<%= @user.following.count %>人）</p>
     </div>
     <div class="fol_yu">
       <div class="fol_yu_ti">
@@ -67,17 +67,6 @@
             <div class="fol_name">
             <p><%= user.nickname %></p>
           </div>
-          <div class="fol">
-              <% if current_user != user %>
-                <% if user.followed_by?(current_user) %>
-                  <p><%=link_to "フォロー解除", user_relationships_path(user.id), method: :delete %></p>
-                <% else %>
-                  <p><%=link_to "フォローする", user_relationships_path(user.id), method: :post %></p>
-                <% end %>
-              <% else %>
-                <p><%=link_to "マイページへ", "/users/#{current_user.id}/mypege/"%></p>
-              <% end %>
-            </div>
           </div>
         </div>
           <% end %>

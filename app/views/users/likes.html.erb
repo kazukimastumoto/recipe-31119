@@ -23,11 +23,11 @@
             </div>
           </div>
         <% end %>
-        <%= link_to follows_user_path(current_user) do %>
+        <%= link_to following_user_path(current_user) do %>
           <div class="fro">
             <h6>フォロー</h6>
             <div class=frow_in>
-              <%= current_user.followings.count %>
+              <%= current_user.following.count %>
             </div>
           </div>
         <% end %>
@@ -47,7 +47,7 @@
       </li>
       <li>
         <i class="fas fa-arrow-circle-left"></i>
-        <%= link_to "戻る", "/users/#{current_user.id}/mypege/" %>
+        <%= link_to "戻る", :back %>
       </li>
     </ul>
   </div>

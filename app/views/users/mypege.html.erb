@@ -21,11 +21,11 @@
             </div>
           </div>
         <% end %>
-        <%= link_to follows_user_path(@user.id) do %>
+        <%= link_to  following_user_path(@user.id) do %>
           <div class="fro">
             <h6>フォロー</h6>
             <div class=frow_in>
-              <%= @user.followings.count %>
+              <%= @user.following.count %>
             </div>
           </div>
         <% end %>
@@ -49,7 +49,7 @@
       </li>
       <li>
         <i class="fas fa-arrow-circle-left"></i>
-        <%= link_to "戻る", root_path %>
+        <%= link_to "戻る",:back %>
       </li>
     </ul>
   </div>

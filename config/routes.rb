@@ -16,14 +16,15 @@ Rails.application.routes.draw do
   delete 'like/:id' => 'likes#destroy', as: 'destroy_like'
 
   resources :users, only: :show do
-    resource :relationships, only: [:create, :destroy]
     collection do
       get :likes
     end
     member do
       get 'mypege'
     end
-    get :follows, on: :member
-    get :followers, on: :member
+    member do
+      get :following, :followers
+    end
   end
+  resources :relationships, only: [:create, :destroy]
 end

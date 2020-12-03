@@ -19,7 +19,7 @@
             <% end %>
                 <div class='iine'>
                   <% if user_signed_in? %>
-                 <div id="recipe_<%= recipe.id %>">
+                <div id="recipe_<%= recipe.id %>">
                     <%= render 'recipes/recipe', recipe: recipe %>
                   </div>
                   <% else %>
