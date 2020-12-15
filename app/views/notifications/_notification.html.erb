@@ -22,7 +22,12 @@
         <div class="iine_re">
           <% when 'follow' then %>
           <span>あなたをフォローしました。<%= time_ago_in_words(notification.created_at).upcase  %>前</span>
-          <% end %>
+        </div>
+        <div class="iine_re">
+        <% when 'comment' then %>
+            <%= link_to "あなたの投稿", notification.recipe %>
+        <span>にコメントしました。</span>
+        <% end %>
         </div>
     </div>
   </div>

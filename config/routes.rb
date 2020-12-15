@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
+    resources :comments, only: :create
   end
   resources :notifications, only: :index
   post 'like/:id' => 'likes#create', as: 'create_like'

@@ -21,6 +21,8 @@ class User < ApplicationRecord
   has_many :follower_relationships, foreign_key: "following_id", class_name: "Relationship", dependent: :destroy
   has_many :followers, through: :follower_relationships
 
+  has_many :comments
+
 
   def liked_by?(recipe_id)
     likes.where(recipe_id: recipe_id).exists?

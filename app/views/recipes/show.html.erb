@@ -61,9 +61,54 @@
     </div>
   </div>
 </div>
+<% if user_signed_in? %>
+<% if  current_user.id != @recipe.user_id  %>
+<div class="show_body">
+  <div class="shw_d shw_i">
+    <div class="sho_t">
+      <span>このレシピのコメントや感想を伝えよう！</span>
+    </div>
+    <div class="comment_form">
+      <%= form_with(model: [@recipe, @comment], local: true) do |f| %>
+      <div class="commnet_area">
+        <div class=comment>
+          <%= f.text_area :text ,placeholder: "例)簡単で美味しかったです", class: :com %>
+        </div>
+        <div class="comment_submit">
+          <%= f.submit "感想を送る", class: :sbt_text%>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<% else %>
+<div class="show_body">
+  <div class="shw_d shw_i">
+    <div class="sho_t">
+      <span>コメント一覧</span>
+    </div>
+    <ul class="comments_lists">
+      <% @comments %>
+        <% @comments.each do |comment|  %>
+          <li class="comments_list">
+            <%= link_to  comment.user.nickname, "/users/#{comment.user_id}", class: :comment_user %>
+          </li>
+          <li class="comments_text">
+            <%= comment.text %>
+          </li>
+          <li class="comment_time">
+            <%= time_ago_in_words(comment.created_at).upcase %><span>前</span>
+          </li>
+        <% end %>
+    </ul>
+  </div>
+</div>
+<% end %>
+<% end %>
 <div class="hens_des">
   <% if user_signed_in? %>
-    <% if current_user.id == @recipe.user_id %>
+    <% if  current_user.id == @recipe.user_id %>
       <div class="hens_body">
         <%= link_to(edit_recipe_path(@recipe.id), method: :get) do %>
           <div class="hens">

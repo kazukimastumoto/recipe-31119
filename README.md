@@ -129,6 +129,7 @@ https://recipe-31119.herokuapp.com/
 - has_many :active_notifications, class_name: 'Notification', foreign_key: 'visitor_id', dependent: :destroy
 - has_many :passive_notifications, class_name: 'Notification', foreign_key: 'visited_id', dependent: :destroy
 - has_many :sns_credentials
+- has_many :comments
 
 <br>
 
@@ -145,6 +146,7 @@ https://recipe-31119.herokuapp.com/
 - belongs_to :user
 - has_many :likes, dependent: :destroy
 - has_many :notifications, dependent: :destroy
+- has_many :comments
 
 <br>
 
@@ -168,10 +170,12 @@ https://recipe-31119.herokuapp.com/
 | visitor_id                | integer    | null: false |
 | visited_id                | integer    | null: false |
 | recipe_id                 | integer    | null: false |
+| comment_id                | integer    | null: false |
 | action                    | string     | null: false |
 | checked                   | boolean    | null: false |
 
 ### Association
+- belongs_to :comment, optional: true
 - belongs_to :post, optional: true
 - belongs_to :visitor, class_name: 'User', foreign_key: 'visitor_id', optional: true
 - belongs_to :visited, class_name: 'User', foreign_key: 'visited_id', optional: true
@@ -187,6 +191,21 @@ https://recipe-31119.herokuapp.com/
 
 ### Association
 - belongs_to :user
+
+<br>
+
+## comments
+
+|  Column                   | Type       | Options     |
+| ------------------------- | ---------- | ----------- |
+| user                      | references | null: false |
+| recipe                    | references | null: false |
+| text                      | string     | null: false |
+
+### Association
+- has_many   :notifications
+- belongs_to :user
+- belongs_to :recipe
 
 <br>
 

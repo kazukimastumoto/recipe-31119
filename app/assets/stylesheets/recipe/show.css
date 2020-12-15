@@ -109,3 +109,69 @@
   color: #FFFFFF;
   border-radius: 30px;
 }
+
+/* コメントフォーム */
+.shw_i{
+  width: 1100px;
+}
+.sho_t{
+  height: 32px;
+  margin-top: 20px
+}
+.sho_t span{
+  font-size: 20px;
+  font-family: 'Kosugi Maru', sans-serif;
+}
+.comment{
+  margin: 10px 0px;
+  font-size: 15px;
+  padding: 8px;
+  border: 1px solid #d2c8be;
+}
+.com{
+  height: 100px;
+  width:  1075px;
+}
+#comment_text{
+  width: 1090px;
+}
+.comment_submit{
+  padding:30px;
+  text-align: center;
+}
+.sbt_text{
+  color: #FFFFFF;
+  background-color: #EF6537;
+  padding: 15px 50px;
+  border-radius: 30px;
+  font-size: 15px;
+}
+
+.sbt_text:hover{
+  color: #EF6537;
+  background-color: #FFFFFF;
+  border: 1px solid  #EF6537;
+  padding: 14px 50px;
+  border-radius: 30px;
+  font-size: 15px;
+}
+/* コメント表示 */
+.comments_lists{
+  margin: 25px 0px;
+}
+.comments_list{
+  font-size: 18px;
+  margin: 25px 0px 8px 0px;
+  font-family: 'Kosugi Maru', sans-serif;
+}
+.comment_user:hover{
+  color: #707070;
+  font-size: 18px;
+  margin: 20px 0px;
+  font-family: 'Kosugi Maru', sans-serif;
+}
+.comment_time{
+  color: #707070;
+  font-size: 12px;
+  border-bottom: 1px solid #d2c8be;
+}
