@@ -63,13 +63,15 @@
 </div>
 <% if user_signed_in? %>
 <% if  current_user.id != @recipe.user_id  %>
+
 <div class="show_body">
   <div class="shw_d shw_i">
     <div class="sho_t">
       <span>このレシピのコメントや感想を伝えよう！</span>
     </div>
     <div class="comment_form">
-      <%= form_with(model: [@recipe, @comment], local: true) do |f| %>
+      <%= form_with(model: @comment,url: recipe_comments_path(@recipe.id),local: true) do |f| %>
+      <% binding.pry %>
       <div class="commnet_area">
         <div class=comment>
           <%= f.text_area :text ,placeholder: "例)簡単で美味しかったです", class: :com %>
@@ -88,9 +90,9 @@
     <div class="sho_t">
       <span>コメント一覧</span>
     </div>
+    <% if @recipe.comments.exists? %>
     <ul class="comments_lists">
-      <% @comments %>
-        <% @comments.each do |comment|  %>
+        <% @recipe.comments.each do |comment| %>
           <li class="comments_list">
             <%= link_to  comment.user.nickname, "/users/#{comment.user_id}", class: :comment_user %>
           </li>
@@ -102,6 +104,9 @@
           </li>
         <% end %>
     </ul>
+    <% else %>
+        コメントはありません
+    <% end %>
   </div>
 </div>
 <% end %>

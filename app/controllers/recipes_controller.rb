@@ -19,8 +19,8 @@ class RecipesController < ApplicationController
     end
 
     def show
-      @comment = Comment.new
       @comments = @recipe.comments.includes(:user)
+      @comment = Comment.new
     end
   end
 
