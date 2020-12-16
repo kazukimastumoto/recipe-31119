@@ -71,7 +71,6 @@
     </div>
     <div class="comment_form">
       <%= form_with(model: @comment,url: recipe_comments_path(@recipe.id),local: true) do |f| %>
-      <% binding.pry %>
       <div class="commnet_area">
         <div class=comment>
           <%= f.text_area :text ,placeholder: "例)簡単で美味しかったです", class: :com %>
