@@ -225,7 +225,7 @@ https://recipe-31119.herokuapp.com/
 <br>
 
 # 10. ER図
-[![Image from Gyazo](https://i.gyazo.com/d42ed9b95042ca192971fb093cc94f19.png)](https://gyazo.com/d42ed9b95042ca192971fb093cc94f19)
+[![Image from Gyazo](https://i.gyazo.com/3bce0943061c4fd6b2f2e5652add4f26.png)](https://gyazo.com/3bce0943061c4fd6b2f2e5652add4f26)
 
 <br>
 
