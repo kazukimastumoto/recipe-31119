@@ -114,9 +114,16 @@
   margin: 80px auto 0;
   width: 271px;
   border: 1px solid #EF6537;
+  color: #EF6537;
   border-radius: 30px;
 }
 .tk_btn{
   padding: 18px 120px;
-  color: #EF6537;
+}
+.new_btn:hover{
+  margin: 80px auto 0;
+  width: 271px;
+  background-color: #EF6537;
+  color: #FFFFFF;
+  border-radius: 30px;
 }
